@@ -1,0 +1,85 @@
+<a href="principal.html">REGRESAR AL INICIO</a>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio4 - Formularios</title>
+</head>
+<body>
+	<header>
+		
+	</header>
+
+	<main>
+		<!-- Encabezados -->
+		<h1 align="center">INFORMACION</h1>
+		<h1 align="center">Si quieres recibir la mejor informacion, registrate: </h1><br>
+
+		<!-- Formulario -->
+
+		<form align="center" action="registro.php" method="POST">
+			<table align="center">
+				<tr>
+					<!-- Nombre -->
+					<td><label for="universidad" >Nombre: </label></td>
+					<td><input type="text" name="nombre" id="nombre"><br><br></td>
+				</tr>
+
+				<tr>
+					<!--Primer Apellido -->
+					<td><label>Primer Apellido: </label></td>
+					<td><input type="text" name="primer_apellido" id="primer_apellido"><br><br></td>
+				</tr>
+
+				<tr>
+					<!-- Segundo Apellido -->
+					<td><label for="segundo_apellido">Segundo Apellido: </label></td>
+					<td><input type="text" name="segundo_apellido" id="segundo_apellido"><br><br></td>
+				</tr>
+
+				<tr>
+					<!-- Domicilio -->
+					<td><label for="domicilio">Domicilio: </label></td>
+					<td><input type="text" name="domicilio" id="domicilio"><br><br></td>
+				</tr>
+
+				<tr>
+					<!-- Codigo postal -->
+					<td><label for="codigo_postal">Codigo Postal: </label></td>
+					<td><input type="text" name="codigo_postal" id="codigo_postal"><br><br></td>
+				</tr>
+
+				<tr>
+					<!-- Telefono -->
+					<td><label for="Telefono">Telefono: </label></td>
+					<td><input type="text" name="Telefono" id="Telefono" ><br><br></td>
+			    </tr>
+
+				<tr>
+					<!-- e-mail -->
+					<td><label for="e-mail">e-mail: </label></td>
+					<td><input type="mail" name="e-mail" id="e-mail"><br><br></td>
+				</tr>
+
+				<tr>
+					<!-- Confirmal e-mail -->
+					<td><label for="e-mailconfirm">Confirmar e-mail: </label></td>
+					<td><input type="mail" name="e-mailconfirm" id="e-mailconfirm"><br><br></td>
+				</tr>
+
+				<tr>
+					<!-- botones enviar y borrar -->
+					<td><input type="reset" name="reseteo" value="Borrar"></td>
+					<td><input type="submit" name="Enviar" value="Enviar"></td><br><br>
+				</tr>
+			</table>
+
+			</form>
+	</main>
+	<footer>
+		
+	</footer>
+</body>
+</html>

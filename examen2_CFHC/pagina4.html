@@ -1,0 +1,92 @@
+<a href="principal.html">REGRESAR AL INICIO</a>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CATÁLOGO DE ARTE</title>
+</head>
+<body>
+    <header>
+        <nav></nav>
+    </header>
+
+    <main>
+        <H1 align="center"> CATÁLOGO DE ARTE</H1>
+        <p align="center"> Introduce los terminos de busqueda</p>
+        <form action="registro.php" method="GET">
+
+            <table align="center">
+                <td></td>
+                <td>
+                    <p>OBRA</p>
+                <td>
+                    <p>TIPO</p>
+                <td>
+                    <p>DISPONIBILIDAD</p>
+                <td>
+                    <p>ESTILO</p>
+                </td>
+                <tr>
+
+                    <td><label for="escuela">TITULO:</label></td>
+                    <td><input type="text" name="Titulo" id="Titulo" value=""></td>
+                    <td>
+                    <label>
+                        <input type="checkbox" value="1" name="estatus" id="estatus">Escultura<br>
+                    </label>
+                    <td>
+
+                        <label>
+                            <input type="radio" value="1" name="estatus" id="estatus"> Museo/Acceso público<br>
+                        </label>
+                    <td>
+
+                        <select name="ramaconocimiento" id="ramaconocimiento">
+                            <option value="1">Clásico</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+
+                    <td><label for="escuela">AUTOR:</label></td>
+                    <td><input type="text" name="Autor" id="Autor" value=""></td>
+                    <td>
+                        <label>
+                            <input type="checkbox" value="1" name="estatus" id="estatus">Arquitectura<br>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="1" name="estatus" id="estatus">Pintura<br>
+                        </label>
+                    <td>
+
+                        <label>
+                            <input type="radio" value="1" name="estatus" id="estatus"> Colección privada<br>
+                        </label>               
+                    </td>
+                </tr>
+                
+                    <td><label>Háganos saber sus sugerencias</label></td>
+                    <td><textarea name="textarea" rows="3" cols="50">Me gustaria indiar que...</textarea></td>
+                </tr>
+                <tr>
+                    <td>
+                        <td>
+                        <div class="w-33">
+                            <div class="center">
+                            <button>
+                                Buscar
+                            </button>
+                            </div>
+                        </div>
+                    </td>
+            </table>
+        </form>
+
+    </main>
+
+    <footer>
+    </footer>
+</body>
+</html>
