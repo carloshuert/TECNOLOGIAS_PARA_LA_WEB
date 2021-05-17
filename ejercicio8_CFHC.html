@@ -1,0 +1,357 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta content="" name="description" />
+    <meta content="webthemez" name="author" />
+    <title>Departamental 2 : Denominacion de Electivas</title>
+    <!-- Bootstrap Styles-->
+    <link href="../plantilla/assets/css/bootstrap.css" rel="stylesheet" />
+     <!-- FontAwesome Styles-->
+    <link href="../plantilla/assets/css/font-awesome.css" rel="stylesheet" />
+        <!-- Custom Styles-->
+    <link href="../plantilla/assets/css/custom-styles.css" rel="stylesheet" />
+     <!-- Google Fonts-->
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+   <!-- TABLE STYLES-->
+   <link href="../plantilla_3/assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
+</head>
+<!--Cuerpo-->
+<body>
+    <!-- Pagina -->
+    <div id="wrapper">
+
+        <!-- . NAV TOP Fila Superior de la pagina -->
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <!--Logo Anaranjado de la esquina superior izquierda-->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Hola</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../plantilla_3/index.html"><strong><i class="icon fa fa-plane"></i> IPN</strong></a>
+				<div id="sideNav" href="">
+		<i class="fa fa-bars icon"></i> 
+		</div>
+            </div>
+            <!--/Logo Anaranjado de la esquina superior izquierda-->
+        </nav>
+        <!--/. NAV TOP  Fila Superior de la pagina -->
+
+        <!-- NAV SIDE Columna de la Izquierda-->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                    <li>
+                        <a href="ejercicio5_CFHC.html" align="left"> <h4>Calculadora Basica</h4></a>
+                    </li>
+                    <li>
+                        <a href="ejercicio6_CFHC.html" align="left"> <h4>Calculadora Cientifica</h4></a>
+                    </li>
+					 <li>
+                        <a href="ejercicio7_CFHC.html" align="left"> <h4>Conversor de Unidades</h4></a>
+                    </li>
+                    <li>
+                        <a class="active-menu" href="ejercicio8_CFHC.html" align="left"><h4>CRUD denominacion</h4></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /. NAV SIDE  Columna de la Izquierda-->
+
+        <!-- PAGE WRAPPER parte central y derecha de la pagina-->
+        <div id="page-wrapper">
+
+            <div class="header"> 
+                <h1 class="page-header">Denomiacion de electivas</h1>
+            </div>
+
+                <div class="header">
+                <div class="panel panel-default">
+                    <div class="panel-body"> 
+                        <div class="row">
+                            <div class="col-md-6"><h5>Alta de denominacion</h5></div>
+                            <div class="col-md-6"><button style="float: right" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+                                Nueva denominacion
+                              </button></div>
+                        </div>
+                        
+                        
+                    </div>
+                </div> 
+                </div>
+                <!--Ventana Modal para Nueva Denominacion-->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title" id="myModalLabel">Alta de denominaciones</h4>
+                            </div>
+                            <div class="modal-body"><!--CONTENIDO DE LA VENTANA MODAL-->
+                                <div class="row"> <!--RENGLON 1-->
+                                    <div class="col-md-6"> <!--COLUMNA 1-->
+                                        <div class="form-group">
+                                            <label>Eje Tematico</label>
+                                            <input type="text" class="form-control" id="txt_alta_1" placeholder="Marcador de Posicion">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Modalidad</label>
+                                            <input type="text" class="form-control" id="txt_alta_2" placeholder="Marcador de Posicion">
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="row"> <!--RENGLON 2-->
+                                    <div class="col-md-6"> <!--COLUMNA 1 DEL RENGLON 2-->
+                                        <div class="form-group">
+                                            <label>Descripcion de creditos</label>
+                                            <input type="text" class="form-control" id="txt_alta_3" placeholder="Marcador de Posicion">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2"> <!--COLUMNA 2 DEL RENGLON 2-->
+                                        <div class="form-group">
+                                            <label>Factor</label>
+                                            <input type="number" class="form-control" id="number_alta_1" min="0" value="0">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row"> <!--RENGLON 3-->
+                                    <div class="col-md-12"> <!--COLUMNA 1-->
+                                        <div class="form-group">
+                                            <label>Ejemplos de Actividades</label>
+                                            <div>
+                                                <textarea class="form-control" rows="9" id="area_alta_1" placeholder="hola">
+                                                    
+                                                </textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /CONTENIDO DE LA VENTANA MODAL-->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-success" onclick="actionCreate();">Guardar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- / Ventana Modal para Nueva Denominacion-->
+
+                <!--Ventana modal para eliminacion de registro-->
+                <div class="modal fade" id="ModalEliminar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title" id="myModalLabel">Atencion</h4>
+                            </div>
+                            <div class="modal-body ">
+                               <p align="center"> Se eliminara el siguiente registro</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-danger">Aceptar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/ Ventana modal para eliminacion de registro-->
+
+                <!--Ventana modal de actualizacion -->
+                <div class="modal fade" id="ModalActualizar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title" id="myModalLabel">Actualizacion de denominacion</h4>
+                            </div>
+                            <div class="modal-body"><!--CONTENIDO DE LA VENTANA MODAL-->
+                                <div class="row"> <!--RENGLON 1-->
+                                    <div class="col-md-6"> <!--COLUMNA 1-->
+                                        <div class="form-group">
+                                            <label>Eje Tematico</label>
+                                            <input type="text" class="form-control" id="txt_actualizacion_1" placeholder="Inquietudes vocacionales propias">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Modalidad</label>
+                                            <input type="text" class="form-control" id="txt_actualizacion_2" placeholder="Docencia">
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="row"> <!--RENGLON 2-->
+                                    <div class="col-md-6"> <!--COLUMNA 1 DEL RENGLON 2-->
+                                        <div class="form-group">
+                                            <label>Descripcion de creditos</label>
+                                            <input type="text" class="form-control" id="txt_actualizacion_3" placeholder="1 credito por cada 16 horas">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2"> <!--COLUMNA 2 DEL RENGLON 2-->
+                                        <div class="form-group">
+                                            <label>Factor</label>
+                                            <input type="number" class="form-control" id="number_actualizacion_1" min="0" value="16">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row"> <!--RENGLON 3-->
+                                    <div class="col-md-12"> <!--COLUMNA 1-->
+                                        <div class="form-group">
+                                            <label>Ejemplos de Actividades</label>
+                                            <div>
+                                                <textarea class="form-control" rows="9" id="area_actualizacion_1" placeholder="hola">
+                                                    
+                                                </textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /CONTENIDO DE LA VENTANA MODAL-->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-primary">Guardar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/Ventana modal de actualizacion -->
+
+                <!--Tabla-->
+                <div id="page-inner">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- Advanced Tables -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                     Advanced Hola
+                                </div>
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                            <thead>
+                                                <tr>
+                                                    <th>Eje Tematico</th>
+                                                    <th>Modalidad</th>
+                                                    <th>Creditos</th>
+                                                    <th>Acciones</th>
+                                                    
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="odd gradeX">
+                                                    <td>Trident</td>
+                                                    <td>Internet Explorer 4.0</td>
+                                                    <td>Win 95+</td>
+                                                    <td class="center">
+                                                        <a href="#" class="btn btn-info">ver</a>
+											            <button class="btn btn-primary" data-toggle="modal" data-target="#ModalActualizar"><i class="fa fa-edit "></i>Actualizar</button>
+											            <button class="btn btn-danger"data-toggle="modal" data-target="#ModalEliminar"><i class="fa fa-pencil"></i>Eliminar</button>
+                                                    </td>
+                                                </tr>
+                                                <tr class="even gradeC">
+                                                    <td>Trident</td>
+                                                    <td>Internet Explorer 5.0</td>
+                                                    <td>Win 95+</td>
+                                                    <td class="center"><a href="#" class="btn btn-info">ver</a>
+											            <button class="btn btn-primary" data-toggle="modal" data-target="#ModalActualizar"><i class="fa fa-edit "></i>Actualizar</button>
+											            <button class="btn btn-danger" data-toggle="modal" data-target="#ModalEliminar"><i class="fa fa-pencil"></i>Eliminar</button></td>
+                                                    
+                                                </tr>
+                                                <tr class="odd gradeA">
+                                                    <td>Trident</td>
+                                                    <td>Internet Explorer 5.5</td>
+                                                    <td>Win 95+</td>
+                                                    <td class="center"><a href="#" class="btn btn-info">ver</a>
+											            <button class="btn btn-primary" data-toggle="modal" data-target="#ModalActualizar"><i class="fa fa-edit "></i>Actualizar</button>
+											            <button class="btn btn-danger" data-toggle="modal" data-target="#ModalEliminar"><i class="fa fa-pencil"></i>Eliminar</button></td>
+                                                    
+                                                </tr>
+                                                <tr class="even gradeA">
+                                                    <td>Trident</td>
+                                                    <td>Internet Explorer 6</td>
+                                                    <td>Win 98+</td>
+                                                    <td class="center"><a href="#" class="btn btn-info">ver</a>
+											            <button class="btn btn-primary" data-toggle="modal" data-target="#ModalActualizar"><i class="fa fa-edit "></i>Actualizar</button>
+											            <button class="btn btn-danger" data-toggle="modal" data-target="#ModalEliminar"><i class="fa fa-pencil"></i>Eliminar</button></td>
+                                                    
+                                                </tr>
+                                                <tr class="odd gradeA">
+                                                    <td>Trident</td>
+                                                    <td>Internet Explorer 7</td>
+                                                    <td>Win XP SP2+</td>
+                                                    <td class="center"><a href="#" class="btn btn-info">ver</a>
+											            <button class="btn btn-primary" data-toggle="modal" data-target="#ModalActualizar"><i class="fa fa-edit "></i>Actualizar</button>
+											            <button class="btn btn-danger" data-toggle="modal" data-target="#ModalEliminar"><i class="fa fa-pencil"></i>Eliminar</button></td>
+                                                    
+                                                </tr>
+                                                <tr class="even gradeA">
+                                                    <td>Trident</td>
+                                                    <td>AOL browser (AOL desktop)</td>
+                                                    <td>Win XP</td>
+                                                    <td class="center"><a href="#" class="btn btn-info">ver</a>
+											            <button class="btn btn-primary" data-toggle="modal" data-target="#ModalActualizar"><i class="fa fa-edit "></i>Actualizar</button>
+											            <button class="btn btn-danger" data-toggle="modal" data-target="#ModalEliminar"><i class="fa fa-pencil"></i>Eliminar</button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <!--End Advanced Tables -->
+                        </div>
+                    </div>
+                </div>
+                 <!--/Tabla-->
+        </div>
+         <!-- /. PAGE WRAPPER  parte central y derecha de la pagina-->
+    </div>
+    <!-- /Pagina -->
+
+    <!-- JQuery y js -->
+    <div>
+     <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+    <script src="../plantilla_3/assets/js/jquery-1.10.2.js"></script>
+      <!-- Bootstrap Js -->
+    <script src="../plantilla_3/assets/js/bootstrap.min.js"></script>
+    <!-- Metis Menu Js -->
+    <script src="../plantilla_3/assets/js/jquery.metisMenu.js"></script>
+      <!-- Custom Js -->
+    <script src="../plantilla_3/assets/js/custom-scripts.js"></script>
+    <!-- JS Scripts-->
+            <!-- jQuery Js -->
+    <script src="../plantilla_3/assets/js/jquery-1.10.2.js" ></script>
+              <!-- Bootstrap Js -->
+    <script src="../plantilla_3/assets/js/bootstrap.min.js" ></script>
+            <!-- Metis Menu Js -->
+    <script src="../plantilla_3/assets/js/jquery.metisMenu.js"></script>
+             <!-- DATA TABLE SCRIPTS -->
+    <script src="../plantilla_3/assets/js/dataTables/jquery.dataTables.js"></script>
+    <script src="../plantilla_3/assets/js/dataTables/dataTables.bootstrap.js" ></script>
+            <script>
+                    $(document).ready(function () {
+                        $('#dataTables-example').DataTable();
+                    });
+            </script>
+                 <!-- Custom Js -->
+    <script src="../plantilla_3/assets/js/custom-scripts.js"></script>
+    <script src="js/crud-denominacion.js"></script>
+    </div>
+    <!-- /JQuery y js -->
+</body>
+</html>
